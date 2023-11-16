@@ -8,10 +8,10 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import java.util.Random;
 
 public class Pumpkin {
-    private PumpkinActivity activity;
-    private ImageView view;
-    private float x, y;
-    private float vx, vy;
+    protected PumpkinActivity activity;
+    protected ImageView view;
+    protected float x, y;
+    protected float vx, vy;
     public boolean isAlive = true;
 
     public Pumpkin(PumpkinActivity activity) {

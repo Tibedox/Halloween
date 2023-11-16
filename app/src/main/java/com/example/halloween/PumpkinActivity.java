@@ -14,9 +14,11 @@ import java.util.TimerTask;
 
 public class PumpkinActivity extends AppCompatActivity {
     private Pumpkin[] pumpkin = new Pumpkin[5];
+    private Ghost[] ghosts = new Ghost[10];
     public int screenWidth, screenHeight;
     public int statusBarHeight;
     public ConstraintLayout bg;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +34,19 @@ public class PumpkinActivity extends AppCompatActivity {
             pumpkin[i] = new Pumpkin(this);
         }
 
+        for (int i = 0; i < ghosts.length; i++) {
+            ghosts[i] = new Ghost(this);
+        }
+
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
                 for (int i = 0; i < pumpkin.length; i++) {
                     pumpkin[i].move();
+                }
+                for (int i = 0; i < ghosts.length; i++) {
+                    ghosts[i].move();
                 }
                 if(isGameOver()){
                     Intent intent = new Intent(PumpkinActivity.this, MainActivity.class);
