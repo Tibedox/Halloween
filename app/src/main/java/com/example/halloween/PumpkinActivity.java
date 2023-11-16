@@ -7,14 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class PumpkinActivity extends AppCompatActivity {
-    private Pumpkin[] pumpkin = new Pumpkin[5];
-    private Ghost[] ghosts = new Ghost[10];
+    private Pumpkin[] pumpkin = new Pumpkin[1];
+    private Ghost[] ghosts = new Ghost[2];
     public int screenWidth, screenHeight;
     public int statusBarHeight;
     public ConstraintLayout bg;
